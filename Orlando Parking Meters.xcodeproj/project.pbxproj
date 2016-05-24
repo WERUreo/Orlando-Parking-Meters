@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42CDB9BC1CF50068006C18DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDB9BB1CF50068006C18DE /* AppDelegate.swift */; };
+		42CDB9BE1CF50068006C18DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDB9BD1CF50068006C18DE /* ViewController.swift */; };
+		42CDB9C11CF50068006C18DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CDB9BF1CF50068006C18DE /* Main.storyboard */; };
+		42CDB9C31CF50068006C18DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CDB9C21CF50068006C18DE /* Assets.xcassets */; };
+		42CDB9C61CF50068006C18DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CDB9C41CF50068006C18DE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42CDB9B81CF50068006C18DE /* Orlando Parking Meters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Orlando Parking Meters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42CDB9BB1CF50068006C18DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42CDB9BD1CF50068006C18DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42CDB9C01CF50068006C18DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42CDB9C21CF50068006C18DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42CDB9C51CF50068006C18DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42CDB9C71CF50068006C18DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42CDB9B51CF50068006C18DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42CDB9AF1CF50068006C18DE = {
+			isa = PBXGroup;
+			children = (
+				42CDB9BA1CF50068006C18DE /* Orlando Parking Meters */,
+				42CDB9B91CF50068006C18DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42CDB9B91CF50068006C18DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42CDB9B81CF50068006C18DE /* Orlando Parking Meters.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42CDB9BA1CF50068006C18DE /* Orlando Parking Meters */ = {
+			isa = PBXGroup;
+			children = (
+				42CDB9BB1CF50068006C18DE /* AppDelegate.swift */,
+				42CDB9BD1CF50068006C18DE /* ViewController.swift */,
+				42CDB9BF1CF50068006C18DE /* Main.storyboard */,
+				42CDB9C21CF50068006C18DE /* Assets.xcassets */,
+				42CDB9C41CF50068006C18DE /* LaunchScreen.storyboard */,
+				42CDB9C71CF50068006C18DE /* Info.plist */,
+			);
+			path = "Orlando Parking Meters";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42CDB9B71CF50068006C18DE /* Orlando Parking Meters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42CDB9CA1CF50068006C18DE /* Build configuration list for PBXNativeTarget "Orlando Parking Meters" */;
+			buildPhases = (
+				42CDB9B41CF50068006C18DE /* Sources */,
+				42CDB9B51CF50068006C18DE /* Frameworks */,
+				42CDB9B61CF50068006C18DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Orlando Parking Meters";
+			productName = "Orlando Parking Meters";
+			productReference = 42CDB9B81CF50068006C18DE /* Orlando Parking Meters.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42CDB9B01CF50068006C18DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Code for Orlando";
+				TargetAttributes = {
+					42CDB9B71CF50068006C18DE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 42CDB9B31CF50068006C18DE /* Build configuration list for PBXProject "Orlando Parking Meters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42CDB9AF1CF50068006C18DE;
+			productRefGroup = 42CDB9B91CF50068006C18DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42CDB9B71CF50068006C18DE /* Orlando Parking Meters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42CDB9B61CF50068006C18DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42CDB9C61CF50068006C18DE /* LaunchScreen.storyboard in Resources */,
+				42CDB9C31CF50068006C18DE /* Assets.xcassets in Resources */,
+				42CDB9C11CF50068006C18DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42CDB9B41CF50068006C18DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42CDB9BE1CF50068006C18DE /* ViewController.swift in Sources */,
+				42CDB9BC1CF50068006C18DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42CDB9BF1CF50068006C18DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42CDB9C01CF50068006C18DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42CDB9C41CF50068006C18DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42CDB9C51CF50068006C18DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42CDB9C81CF50068006C18DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42CDB9C91CF50068006C18DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42CDB9CB1CF50068006C18DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Orlando Parking Meters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.Orlando-Parking-Meters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42CDB9CC1CF50068006C18DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Orlando Parking Meters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.Orlando-Parking-Meters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42CDB9B31CF50068006C18DE /* Build configuration list for PBXProject "Orlando Parking Meters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42CDB9C81CF50068006C18DE /* Debug */,
+				42CDB9C91CF50068006C18DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42CDB9CA1CF50068006C18DE /* Build configuration list for PBXNativeTarget "Orlando Parking Meters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42CDB9CB1CF50068006C18DE /* Debug */,
+				42CDB9CC1CF50068006C18DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42CDB9B01CF50068006C18DE /* Project object */;
+}
