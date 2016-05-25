@@ -37,9 +37,6 @@ class MapVC: UIViewController, MKMapViewDelegate
 
         mapView.delegate = self
 
-        let region = MKCoordinateRegionMakeWithDistance(centerPoint, 2000, 2000)
-        mapView.setRegion(region, animated: true)
-
         DataService.sharedInstance.getParkingMeters
         { meters in
             var annotations = [MeterAnnotation]()
@@ -52,6 +49,9 @@ class MapVC: UIViewController, MKMapViewDelegate
             dispatch_async(dispatch_get_main_queue())
             {
                 self.clusteringManager.addAnnotations(annotations)
+
+                let region = MKCoordinateRegionMakeWithDistance(self.centerPoint, 2000, 2000)
+                self.mapView.setRegion(region, animated: true)
             }
         }
     }
