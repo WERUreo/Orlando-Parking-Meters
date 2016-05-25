@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Orlando Parking Meters/Alamofire.framework"
+  install_framework "Pods-Orlando Parking Meters/FBAnnotationClusteringSwift.framework"
   install_framework "Pods-Orlando Parking Meters/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Orlando Parking Meters/Alamofire.framework"
+  install_framework "Pods-Orlando Parking Meters/FBAnnotationClusteringSwift.framework"
   install_framework "Pods-Orlando Parking Meters/SwiftyJSON.framework"
 fi
