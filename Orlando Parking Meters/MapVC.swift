@@ -28,6 +28,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     var meters = [ParkingMeter]()
     let clusteringManager = FBClusteringManager()
     lazy var locationManager = CLLocationManager()
+    var currentMapType = MKMapType.Standard
 
     ////////////////////////////////////////////////////////////
     // MARK: - View Conroller Lifecycle
@@ -45,12 +46,23 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             locationManager.requestWhenInUseAuthorization()
         }
 
-        //mapView.showsUserLocation = true
         mapView.userTrackingMode = .None
+        mapView.mapType = currentMapType
+
+        // setup toolbar
+        var barItems = [UIBarButtonItem]()
 
         let userTrackingButton = MKUserTrackingBarButtonItem(mapView: mapView)
-        var barItems = [UIBarButtonItem]()
         barItems.append(userTrackingButton)
+
+        let flexBar = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        barItems.append(flexBar)
+
+        let infoButton = UIButton(type: .InfoLight)
+        infoButton.addTarget(self, action: #selector(MapVC.infoButtonPressed(_:)), forControlEvents: .TouchUpInside)
+        let infoBarButton = UIBarButtonItem(customView: infoButton)
+        barItems.append(infoBarButton)
+
         self.toolbar.setItems(barItems, animated: true)
 
         DataService.sharedInstance.getParkingMeters
@@ -70,6 +82,23 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
                 self.mapView.setRegion(region, animated: true)
             }
         }
+    }
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - Helper functions
+    ////////////////////////////////////////////////////////////
+
+    func infoButtonPressed(sender: UIButton)
+    {
+        switch (currentMapType)
+        {
+        case .Standard:
+            mapView.mapType = .Hybrid
+        default:
+            mapView.mapType = .Standard
+        }
+
+        currentMapType = mapView.mapType
     }
 
     ////////////////////////////////////////////////////////////
