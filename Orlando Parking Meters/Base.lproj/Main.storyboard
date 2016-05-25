@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MapVC-->
@@ -17,25 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-1m-dbu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-1m-dbu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVO-5X-fQQ">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SX2-1m-dbu" secondAttribute="bottom" id="V1d-Hz-LZf"/>
+                            <constraint firstAttribute="trailing" secondItem="rVO-5X-fQQ" secondAttribute="trailing" id="526-20-Tw2"/>
                             <constraint firstAttribute="trailing" secondItem="SX2-1m-dbu" secondAttribute="trailing" id="Xpe-jW-ehL"/>
-                            <constraint firstItem="SX2-1m-dbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bXf-T5-WXq"/>
+                            <constraint firstItem="rVO-5X-fQQ" firstAttribute="top" secondItem="SX2-1m-dbu" secondAttribute="bottom" id="mga-0p-VDv"/>
+                            <constraint firstItem="SX2-1m-dbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="wOU-bD-jof"/>
+                            <constraint firstItem="rVO-5X-fQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xqb-RQ-kwg"/>
                             <constraint firstItem="SX2-1m-dbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zBu-KE-LAE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rVO-5X-fQQ" secondAttribute="bottom" id="zbU-1d-jKd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9hr-Eg-jG9"/>
                     <connections>
                         <outlet property="mapView" destination="SX2-1m-dbu" id="HC6-E7-z7y"/>
+                        <outlet property="toolbar" destination="rVO-5X-fQQ" id="LyA-5I-oqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="446"/>
+            <point key="canvasLocation" x="1377" y="446"/>
         </scene>
     </scenes>
 </document>

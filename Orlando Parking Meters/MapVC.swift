@@ -11,13 +11,14 @@ import MapKit
 import Alamofire
 import FBAnnotationClusteringSwift
 
-class MapVC: UIViewController, MKMapViewDelegate
+class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
     ////////////////////////////////////////////////////////////
     // MARK: - Outlets
     ////////////////////////////////////////////////////////////
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var toolbar: UIToolbar!
 
     ////////////////////////////////////////////////////////////
     // MARK: - Properties
@@ -26,6 +27,7 @@ class MapVC: UIViewController, MKMapViewDelegate
     let centerPoint = CLLocationCoordinate2DMake(28.540655, -81.381483)
     var meters = [ParkingMeter]()
     let clusteringManager = FBClusteringManager()
+    lazy var locationManager = CLLocationManager()
 
     ////////////////////////////////////////////////////////////
     // MARK: - View Conroller Lifecycle
@@ -36,6 +38,20 @@ class MapVC: UIViewController, MKMapViewDelegate
         super.viewDidLoad()
 
         mapView.delegate = self
+        locationManager.delegate = self
+
+        if CLLocationManager.authorizationStatus() == .NotDetermined
+        {
+            locationManager.requestWhenInUseAuthorization()
+        }
+
+        //mapView.showsUserLocation = true
+        mapView.userTrackingMode = .None
+
+        let userTrackingButton = MKUserTrackingBarButtonItem(mapView: mapView)
+        var barItems = [UIBarButtonItem]()
+        barItems.append(userTrackingButton)
+        self.toolbar.setItems(barItems, animated: true)
 
         DataService.sharedInstance.getParkingMeters
         { meters in
@@ -53,6 +69,18 @@ class MapVC: UIViewController, MKMapViewDelegate
                 let region = MKCoordinateRegionMakeWithDistance(self.centerPoint, 2000, 2000)
                 self.mapView.setRegion(region, animated: true)
             }
+        }
+    }
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - CLLocationManagerDelegate
+    ////////////////////////////////////////////////////////////
+
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
+    {
+        if status == .AuthorizedWhenInUse
+        {
+            locationManager.startUpdatingLocation()
         }
     }
 
@@ -85,7 +113,7 @@ class MapVC: UIViewController, MKMapViewDelegate
             clusterView = FBAnnotationClusterView(annotation: annotation, reuseIdentifier: reuseID, options: nil)
             return clusterView
         }
-        else
+        else if annotation is MeterAnnotation
         {
             reuseID = "Pin"
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
@@ -103,6 +131,8 @@ class MapVC: UIViewController, MKMapViewDelegate
 
             return annotationView
         }
+
+        return nil
     }
 }
 
